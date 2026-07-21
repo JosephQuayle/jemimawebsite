@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  border-bottom: solid 2px rgb(255, 0, 0);
+  border-bottom: solid 2px rgb(255, 0, 217);
+}
+
+.footer {
+  padding-bottom: 0;
+}
+
+.footer .container {
+  border-bottom: 0;
+}
+
+.button {
+  color: black;
+  text-decoration: none;
+  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 0, 217);
+
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.button:hover {
+  color: white;
+}
+
+.about .container {
+  text-align: center;
+}
+
+.testimonials .container {
+  text-align: center;
+}
+
+.testimonial {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.testimonial.show {
+  opacity: 1;
+}
+
+.contact .container ul li {
+  list-style-position: inside;
+}
+
+.contact .container ul li::marker {
+  color: rgb(255, 0, 217);
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-list li::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Phone icon */
+.icon-list li.phone::before {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23ff4fa3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.78 16.46 14.86C17.74 15.13 19.08 15.27 20.5 15.27C21.33 15.27 22 15.94 22 16.77V20.5C22 21.33 21.33 22 20.5 22C10.28 22 2 13.72 2 3.5C2 2.67 2.67 2 3.5 2H7.23C8.06 2 8.73 2.67 8.73 3.5C8.73 4.92 8.87 6.26 9.14 7.54C9.22 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/></svg>');
+}
+
+/* Email icon */
+.icon-list li.email::before {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23ff4fa3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/></svg>');
+}
+
+.flex {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .flex {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2rem; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
