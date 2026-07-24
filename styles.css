@@ -8,6 +8,7 @@
   margin: 0;
   font-family: "Roboto Slab", serif;
   color: var(--SECONDARY-COL);
+  text-align: center;
 }
 
 .container {
@@ -25,10 +26,10 @@
   background-color: white;
   border-radius: 50px;
   padding: 10px;
-  font-family: "Chicle", serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 400;
   font-style: normal;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
 }
 
 .header {
@@ -39,12 +40,14 @@
   background-color: var(--PRIMARY-COL);
 }
 
-.footer {
-  padding-bottom: 0;
+.about-me {
+  background-color: var(--PRIMARY-COL);
 }
 
-.footer .container {
-  border-bottom: 0;
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .button {
@@ -72,9 +75,9 @@
   color: white;
 }
 
-.about .container {
-  text-align: center;
-  padding-bottom: 0;
+.hero-img {
+  display: flex;
+  justify-content: center;
 }
 
 .services .button {
@@ -85,7 +88,24 @@
 
 .services .button:hover {
   background-color: var(--SECONDARY-COL);
-  color: white;
+  color: var(--PRIMARY-COL);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.faq-card {
+  display: flex;
+  padding: 15px;
+  border: solid 2px var(--PRIMARY-COL);
+  border-radius: 5px;
+}
+
+.faq-card-plus {
+  margin-left: auto;
 }
 
 .testimonials {
@@ -103,6 +123,15 @@
 
 .testimonial.show {
   opacity: 1;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact {
+  background-color: var(--PRIMARY-COL);
 }
 
 .contact .container ul li {
@@ -161,15 +190,18 @@
   background-color: var(--PRIMARY-COL);
 }
 
-@media (min-width: 768px) {
-  .flex {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 2rem; */
+.footer {
+  padding-bottom: 0;
+}
 
+.footer .container {
+  border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .faq-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
 }
