@@ -60,7 +60,8 @@ html {
   border-bottom: 10px solid var(--SECONDARY-COL);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  box-shadow: 0 25px 20px -20px var(--SECONDARY-COL);
+  /* box shadow looks good but has a faint shadow on all sides not just bottom */
+  /* box-shadow: 0 25px 20px -20px var(--SECONDARY-COL); */
 }
 
 .button {
@@ -159,7 +160,8 @@ html {
   border-bottom: 10px solid var(--SECONDARY-COL);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  box-shadow: 0 25px 20px -20px var(--SECONDARY-COL);
+  /* box shadow looks good but has a faint shadow on all sides not just bottom */
+  /* box-shadow: 0 25px 20px -20px var(--SECONDARY-COL); */
 }
 
 .gallery {
