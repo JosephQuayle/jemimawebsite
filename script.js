@@ -79,3 +79,54 @@ setInterval(() => {
   index = (index + 1) % testimonials.length;
   showTestimonial(index);
 }, 4000);
+
+// gallery
+const galleryImages = [
+  "./img/img0.jpg",
+  "./img/img1.jpg",
+  "./img/img2.jpg",
+  "./img/img3.jpg",
+  "./img/img4.jpg",
+  "./img/img5.jpg",
+];
+
+const galleryGrid = document.querySelector(".gallery-grid");
+
+galleryImages.forEach((src) => {
+  const card = document.createElement("div");
+  card.className = "gal-card";
+
+  const container = document.createElement("div");
+  container.className = "gal-img-container";
+  container.style.width = "100%";
+
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = "";
+  img.style.width = "100%";
+
+  container.appendChild(img);
+  card.appendChild(container);
+  galleryGrid.appendChild(card);
+});
+
+const galleryPrev = document.querySelector(".prev");
+const galleryNext = document.querySelector(".next");
+
+let currentIndex = 0;
+
+function updateSlider() {
+  const offset = currentIndex * -100;
+  galleryGrid.style.transform = `translateX(${offset}%)`;
+}
+
+galleryPrev.onclick = () => {
+  currentIndex =
+    (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  updateSlider();
+};
+
+galleryNext.onclick = () => {
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  updateSlider();
+};
