@@ -39,6 +39,72 @@
 //   //   testimonialSection.appendChild(br);
 // }
 
+// faqs
+const faqs = [
+  {
+    question: "What equipment do I need to get started?",
+    answer:
+      "You can begin with zero equipment. Your plan adapts to whatever you have—bodyweight, dumbbells, or a full home gym.",
+  },
+  {
+    question: "How does online coaching work week-to-week?",
+    answer:
+      "You get structured workouts, check-ins, form feedback, and messaging support so you always know exactly what to do.",
+  },
+  {
+    question: "Will my plan be customised to my goals?",
+    answer:
+      "Yes. Every training and nutrition plan is tailored to your goals, schedule, experience level, and lifestyle.",
+  },
+  {
+    question: "What if I’m a beginner or returning after a long break?",
+    answer:
+      "Your plan starts at a safe, achievable level with clear video demos and progressions to build confidence and consistency.",
+  },
+];
+
+const faqGrid = document.querySelector(".faq-grid");
+
+faqs.forEach((question) => {
+  const card = document.createElement("div");
+  card.classList.add("faq-card");
+
+  const pQuestion = document.createElement("p");
+  pQuestion.textContent = question.question;
+  pQuestion.classList.add("faq-question");
+
+  const pPlus = document.createElement("p");
+  pPlus.classList.add("faq-card-plus");
+
+  const spanPlus = document.createElement("a");
+  spanPlus.textContent = "+";
+  spanPlus.classList.add("faq-card-plus-a");
+
+  card.appendChild(pQuestion);
+  card.appendChild(pPlus);
+  card.appendChild(spanPlus);
+
+  const pAnswer = document.createElement("p");
+  pAnswer.textContent = question.answer;
+  pAnswer.classList.add("faq-answer");
+  pAnswer.style.display = "none";
+  pAnswer.style.marginTop = "1rem";
+
+  card.appendChild(pAnswer);
+
+  spanPlus.addEventListener("click", () => {
+    if (pAnswer.style.display === "none") {
+      pAnswer.style.display = "block";
+      spanPlus.textContent = "–";
+    } else {
+      pAnswer.style.display = "none";
+      spanPlus.textContent = "+";
+    }
+  });
+
+  faqGrid.appendChild(card);
+});
+
 let testimonials = [
   ["I’ve never felt stronger. Her coaching changed my life.", "- Sarah M."],
   ["Finally a trainer who understands women’s fitness properly.", "— Emily R."],

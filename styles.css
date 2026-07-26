@@ -118,13 +118,26 @@ html {
 
 .faq-card {
   display: flex;
+  flex-wrap: wrap;
   padding: 15px;
   border: solid 2px var(--PRIMARY-COL);
   border-radius: 5px;
 }
 
+.faq-question {
+  font-weight: bold;
+}
+
+.faq-answer {
+  text-align: left;
+}
+
 .faq-card-plus {
   margin-left: auto;
+}
+
+.faq-card-plus-a {
+  font-weight: bold;
 }
 
 .testimonials {
