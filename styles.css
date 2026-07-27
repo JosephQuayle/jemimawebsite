@@ -44,6 +44,13 @@ html {
   background-color: var(--PRIMARY-COL);
 }
 
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-bottom: 0px;
+}
+
 .about-me {
   background-color: var(--PRIMARY-COL);
 }
@@ -126,6 +133,7 @@ html {
 
 .faq-question {
   font-weight: bold;
+  text-align: left;
 }
 
 .faq-answer {
@@ -138,6 +146,7 @@ html {
 
 .faq-card-plus-a {
   font-weight: bold;
+  cursor: pointer;
 }
 
 .testimonials {
@@ -314,6 +323,26 @@ html {
 }
 
 @media (min-width: 768px) {
+  /* * {
+    text-align: left !important;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .hero .container {
+    flex-direction: row;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: px;
+  } */
+
   .faq-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
