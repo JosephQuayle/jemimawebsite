@@ -323,8 +323,8 @@ html {
 }
 
 @media (min-width: 768px) {
-  /* * {
-    text-align: left !important;
+  * {
+    text-align: left;
   }
 
   .hero {
@@ -335,17 +335,57 @@ html {
     flex-direction: row;
   }
 
-  .hero-content h1 {
-    font-size: 40px;
+  .hero-content {
+    align-self: center;
   }
 
-  .hero-content p {
-    font-size: px;
-  } */
+  .hero-img img {
+    content: url("./img/jemima-one-bicep.svg");
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: 50px;
+  }
+
+  .hero-start {
+    display: inline-block;
+    animation: bounce2 2s ease infinite;
+  }
+
+  @keyframes bounce2 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
   .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    max-width: 70%;
+    margin: 0 auto;
   }
 }
