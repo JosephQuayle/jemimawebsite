@@ -39,6 +39,45 @@
 //   //   testimonialSection.appendChild(br);
 // }
 
+//services
+function showService(event, service, button) {
+  event.preventDefault();
+  //for each button, set back to defaults
+  document.querySelectorAll(".mini-nav-btn button").forEach((btn) => {
+    btn.style.backgroundColor = "rgb(255, 208, 242)";
+    btn.style.border = "none";
+  });
+
+  //then apply changes to clicked button to show it's active
+  button.style.backgroundColor = "rgb(233, 196, 222)";
+  button.style.border = "solid 1px rgb(34, 41, 48)";
+
+  //then depending on the service chosen, show/hide them
+  switch (service) {
+    //1-1 coaching
+    case 1:
+      // code block
+
+      break;
+    //strength
+    case 2:
+      // code block
+
+      break;
+    //fat loss
+    case 3:
+      // code block
+
+      break;
+    //chat
+    case 4:
+      // code block
+
+      break;
+    default:
+    // code block
+  }
+}
 // faqs
 const faqs = [
   {
