@@ -39,6 +39,18 @@
 //   //   testimonialSection.appendChild(br);
 // }
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Pick whichever button should be active by default
+  const defaultButton = document.querySelector(".mini-nav-btn button");
+
+  // Run your function once on load
+  showService(
+    { preventDefault: () => {} }, // fake event so your function doesn't break
+    0, // the default service index
+    defaultButton, // the default button element
+  );
+});
+
 //services
 function showService(event, service, button) {
   event.preventDefault();
@@ -52,26 +64,44 @@ function showService(event, service, button) {
   button.style.backgroundColor = "rgb(233, 196, 222)";
   button.style.border = "solid 1px rgb(34, 41, 48)";
 
+  let serviceCards = document.querySelectorAll(".service-card");
+
   //then depending on the service chosen, show/hide them
   switch (service) {
     //1-1 coaching
-    case 1:
+    case 0:
       // code block
+      serviceCards[0].style.display = "block";
+      serviceCards[1].style.display = "none";
+      serviceCards[2].style.display = "none";
+      serviceCards[3].style.display = "none";
 
       break;
     //strength
-    case 2:
+    case 1:
       // code block
+      serviceCards[0].style.display = "none";
+      serviceCards[1].style.display = "block";
+      serviceCards[2].style.display = "none";
+      serviceCards[3].style.display = "none";
 
       break;
     //fat loss
-    case 3:
+    case 2:
       // code block
+      serviceCards[0].style.display = "none";
+      serviceCards[1].style.display = "none";
+      serviceCards[2].style.display = "block";
+      serviceCards[3].style.display = "none";
 
       break;
     //chat
-    case 4:
+    case 3:
       // code block
+      serviceCards[0].style.display = "none";
+      serviceCards[1].style.display = "none";
+      serviceCards[2].style.display = "none";
+      serviceCards[3].style.display = "block";
 
       break;
     default:

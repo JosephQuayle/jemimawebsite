@@ -322,6 +322,57 @@ html {
   padding-bottom: 0;
 }
 
+.services h2 {
+  text-align: center;
+}
+
+.mini-nav {
+  width: 60%;
+  min-width: 300px;
+  max-width: 300px;
+  margin: 0 auto;
+  /* text-align: center; */
+  display: flex;
+  /* gap: 2rem; */
+  justify-content: space-around;
+  border: solid 1px rgb(161, 130, 153);
+  background-color: var(--PRIMARY-COL);
+  border-radius: 50px;
+  padding: 2px;
+}
+
+.mini-nav-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.mini-nav button {
+  font-size: 25px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--PRIMARY-COL);
+  text-align: center;
+  cursor: pointer;
+}
+
+.mini-nav button:hover {
+  border: solid 1px var(--SECONDARY-COL);
+}
+
+.service-grid {
+  grid-template-columns: 1fr;
+}
+
+.service-card {
+  text-align: center !important;
+}
+
 @media (min-width: 768px) {
   * {
     text-align: left;
@@ -386,38 +437,6 @@ html {
 
   .mini-nav {
     width: 25%;
-    margin: 0 auto;
-    /* text-align: center; */
-    display: flex;
-    /* gap: 2rem; */
-    justify-content: space-around;
-    border: solid 1px rgb(161, 130, 153);
-    background-color: var(--PRIMARY-COL);
-    border-radius: 50px;
-    padding: 2px;
-  }
-
-  .mini-nav-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .mini-nav button {
-    font-size: 25px;
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 6px;
-    border: none;
-    border-radius: 50px;
-    background-color: var(--PRIMARY-COL);
-    text-align: center;
-  }
-
-  .mini-nav button:hover {
-    border: solid 1px var(--SECONDARY-COL);
   }
 
   .service-grid {
